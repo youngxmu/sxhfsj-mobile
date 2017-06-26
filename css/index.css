@@ -1,0 +1,51 @@
+.pic-box{
+	width: 100%;
+	height: 3.2rem;
+}
+
+
+
+.panel .prod-box{
+	padding: 0.2rem;
+	font-size: 0;
+}
+
+.panel .prod-box li{
+	width: 50%;
+	display: inline-block;
+	margin-bottom: 0.2rem;
+}
+
+.panel .prod-box li:nth-child(2n+1){
+	padding-right: 0.1rem;	
+}
+
+.panel .prod-box li:nth-child(2n+0){
+	padding-left: 0.1rem;	
+}
+
+.panel .prod-box li .prod-pic{
+	width: 100%;
+	padding-top: 100%;
+	position: relative;
+}
+
+.panel .prod-box li .prod-pic img{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	object-fit:cover;
+}
+
+.panel .prod-box li .prod-name{
+	width: 100%;
+	font-size: 0.24rem;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+	display: block;
+	height: 0.4rem;
+	line-height: 0.4rem;
+}
