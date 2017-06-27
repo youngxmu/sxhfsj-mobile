@@ -148,5 +148,14 @@ $(document).ready(function() {
             doc.scrollTop = value;
         });
 	});
+
+
+	$('#wrapper').on('click', '.menu-panel li', function(){
+		var $this = $(this);
+		$this.addClass('active');
+		setTimeout(function(){
+			window.location.href = $this.attr('data-href');
+		}, 100);
+	});
 	
 });
