@@ -35,6 +35,7 @@
               <span class="title">产品图片</span>
             </div>
             <ul class="prod-box"></ul>
+            <div class="loading-msg"><span class="loading-ico"></span>正在加载更多...</div>
           </div>
           <!--#include file="include/footer.html"-->
         </div>
@@ -51,6 +52,9 @@
           <span class="prod-name">${item.desc}</span>
         </li>
       {@/each}
+      {@if list.length/2 == 1}
+        <li></li>
+      {@/if}
     </script>
     <script type="text/javascript" src='js/swiper.js'></script>
     <script type="text/javascript" src='js/index.js'></script>

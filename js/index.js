@@ -40,12 +40,21 @@
 				var scrollTop = $(this)[0].scrollTop;//滚动高度  
 				// console.log( viewH +' '  + contentH +' '+ scrollTop );
 				if(contentH - viewH - scrollTop <= 50 ) { //到达底部100px时,加载新内容  
-					_this.loadProd();
-
+					if(_this.loading){
+						return;
+					}
+					_this.loading = true;
+					$('.loading-msg').show();
+					setTimeout(function(){
+						_this.loadProd();
+						$('.loading-msg').hide();	
+					}, 1000);
+					
 	            } 
 			}); 
 		},
 		loadProd : function(){
+
 			if(_this.currProdIndex >= _this.prodList.length){
 				console.log('end');
 				return;
@@ -72,7 +81,7 @@
 			$('.prod-box').append(title);
 			$('.prod-box').append(html);
 			_this.initGallery();
-			
+			_this.loading = false;
 		},
 		closeImgPlayer : function(){
 			_this.pswp.close();
