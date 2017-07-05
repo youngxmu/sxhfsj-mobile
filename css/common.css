@@ -64,6 +64,17 @@ input{outline:none}
 	color: #ffffff;
 }
 
+/*.index-title .menu{
+	position: absolute;
+	top: 0;right: 0;
+	background-image: url("../svg/menu.svg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 0.4rem 0.4rem;
+	width: 0.8rem;
+	height: 0.8rem;
+}*/
+
 .index-title .menu{
 	position: absolute;
 	top: 0;right: 0;
@@ -73,7 +84,18 @@ input{outline:none}
 	background-size: 0.4rem 0.4rem;
 	width: 0.8rem;
 	height: 0.8rem;
+	-webkit-transition: background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    transition: background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
+
+.index-title .menu.on{
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
 
 .menu-panel{
 	width: 100%;
