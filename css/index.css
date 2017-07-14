@@ -38,7 +38,7 @@
 	position: absolute;
 	left: 0;
 	top: 0;
-	object-fit:cover;
+	object-fit:contain;
 }
 
 .panel .prod-box li .prod-name{

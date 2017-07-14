@@ -4,8 +4,8 @@
 		tpl : {
 			prodTpl : null
 		},
-		pageSize : 6,
 		data : {},
+		pageSize : 6,
 		prodList : [],
 		init : function(options){
 			_this.tpl.prodTpl = juicer($('#prod-tpl').html());
@@ -38,7 +38,6 @@
 				}
 				var contentH =$('.scroll-panel').height();//内容高度  
 				var scrollTop = $(this)[0].scrollTop;//滚动高度  
-				// console.log( viewH +' '  + contentH +' '+ scrollTop );
 				if(contentH - viewH - scrollTop <= 50 ) { //到达底部100px时,加载新内容  
 					if(_this.loading){
 						return;
@@ -49,14 +48,11 @@
 						_this.loadProd();
 						$('.loading-msg').hide();	
 					}, 1000);
-					
-	            } 
-			}); 
+				}
+			});
 		},
 		loadProd : function(){
-
 			if(_this.currProdIndex >= _this.prodList.length){
-				console.log('end');
 				return;
 			}
 			var prodData = _this.prodList[_this.currProdIndex];
@@ -72,7 +68,6 @@
 				end = listSize;
 				_this.currProdIndex++;
 				_this.currListIndex=0;
-				console.log(prodData.name + ' load finished');
 			}else{
 				_this.currListIndex++;	
 			}
