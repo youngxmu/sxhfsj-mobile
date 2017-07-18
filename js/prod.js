@@ -120,6 +120,7 @@
 			var title = '';
 			if(_this.currListIndex == 0){
 				title = '<div class="prod-type" ><span>' + prodData.name + '</span></div>';
+				$('.prod-nav li').eq(_this.currProdIndex).addClass('active').siblings('li').removeClass('active');
 			}
 			if(listSize < end){
 				end = listSize;
